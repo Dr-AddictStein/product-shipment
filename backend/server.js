@@ -4,6 +4,7 @@ import mongoose, { connect } from "mongoose";
 import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
+import productRoute from "./routes/productRoutes.js";
 
 
 dotenv.config();
@@ -25,6 +26,9 @@ app.use((req, res, next) => {
 
 // user
 app.use("/api/user", userRoutes);
+
+// product
+app.use("/api/product",productRoute);
 
 
 
